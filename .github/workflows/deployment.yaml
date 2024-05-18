@@ -27,7 +27,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run Linter
-        run: npm lint
+        run: npm run lint
   deploy:
     needs: [test, linter]
     runs-on: ubuntu-latest
@@ -41,6 +41,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build project
-        run: npm build
+        run: npm run build
       - name: Deploy
         run: echo "Deploying ..."
